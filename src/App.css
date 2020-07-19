@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background-color: rgb(231, 228, 225);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  text-align: right;
+  width: 100%;
+  top: 0;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+nav ul li{
+  margin-right: 10px; 
+  display: inline;
+}
+
+section{
+  padding: 120px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.tarjeta {
+  background-color: rgb(255, 255, 255);
+  width: 750px;
+  text-align: center;
+  margin: 120px;
+  margin-top: 2%;
+  margin-left: auto;  
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 6px 9px 28px -4px rgba(0,0,0,0.75);
+  
+}
+
+input, select, textarea {
+  display: block;
+  width: 100%;
+  font-size: 150%;
+
+  
+}
+
+form div {
+  text-align: left;
+  margin: 20px;
+}
+
+nav{
+  
+  padding: 2px;
+  overflow: hidden;
+  background-color: rgba(54, 54, 54, 0.452);
+
+}
+
+nav a{
+  text-decoration: none;
+  color: yellowgreen;
+  padding: 1.5%;
+}
+
+nav a:hover{
+  background-color: grey;
+  color: white;
+  transition: 0.3s;
+}
+
+nav a.activate{
+  background-color: rgba(102, 102, 102, 0.65);
+  color: white;
+
+}
+footer{
+ 
+  height: 100px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+button{
+  margin-top: 20px;
+  height: 30px;
+  width: 150px;
+  background-color: white;
+  color: black;
+  border: 1px solid yellowgreen;
+  margin-left: 35px;
+  margin-right: 35px;
+  
+}
+button:hover{
+  background-color: yellowgreen;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.centrado{
+  text-align: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label{
+  font-weight: bold;
+}
+
+input::placeholder{
+  opacity: 0.5;
+  font-size: 80%;
+  
+}
+
+a:visited{
+  color: rgb(133, 53, 126);
+}
+
+.inputError{
+  border-color: red;
+  
 }
