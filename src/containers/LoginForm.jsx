@@ -1,5 +1,6 @@
 import React from 'react';
 import InputLine from '../componente/InputLine';
+import {login} from '../api'
 import {validateEmail, validatePassword} from '../utils/validations';
 
 export default class LoginForm extends React.Component{
@@ -20,14 +21,10 @@ export default class LoginForm extends React.Component{
         } else {
             return false;
         }*/
-    
-    
-    
-
 
 
     doLogin = (event) => {
-        const {email, password} = this.state.loginData;
+       /* const {email, password} = this.state.loginData;
         const emailError = validateEmail(email);
         const passwordError= !validatePassword(password,email);
 
@@ -42,9 +39,14 @@ export default class LoginForm extends React.Component{
 
         }
 
-        )
+        )*/
 
         event.preventDefault();
+        login(this.state.loginData).then(function(response){
+            return response.text();
+        }).then(function(token){
+            console.log(token);
+        });
     }
 
     onChange =(name, event) => {
