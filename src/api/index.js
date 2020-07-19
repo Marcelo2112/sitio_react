@@ -10,3 +10,15 @@ export function login (usuario){
         } 
     });
 }
+
+export function getDeliveries(){
+    const token = localStorage.getItem('token');
+    return fetch('http://localhost:5001/deliveries',{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer' +token
+        }
+
+    })
+}

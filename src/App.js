@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
+import Deliveries from './pages/Deliveries';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,24 +16,13 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/"> {/* Home*/}
-          <Login/>
-        </Route>
-        <Route path="/Login">
-          <Login/>
-        </Route>
-        <Route path="/register">
-          <Register/>
-        </Route>
-        <Route path="/contact">
-          <Contact/>
-        </Route>
-        <Route path="*">
-          <NotFound/>
-        </Route>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/deliveries" component={Deliveries} />
+        <Route exact path="*" component={NotFound} />
       </Switch>
-
-
     </Router>
    
   );
