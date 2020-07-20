@@ -3,7 +3,7 @@ import NavBar from '../componente/NavBar';
 import Content from '../componente/Content';
 import Footer from '../componente/Footer';
 import DeliveriesInfo from  '../containers/DeliveriesInfo'
-import LoginForm from '../containers/LoginForm';
+
 
 
 const links = [

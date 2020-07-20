@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function DeliveriesTable(){
+export default function DeliveriesTable(props){
     return (
         <table>
             <thead>
@@ -11,6 +11,15 @@ export default function DeliveriesTable(){
                     <th>Fecha de Creaci&oacute;n    </th>
                 </tr>
             </thead>
+            <tbody>
+                {props.deliveries.map((delivery, key) =>(
+                    <tr key={key}>
+                        <td>{delivery.id}</td>
+                        <td>{delivery.estado}</td>
+                        <td>{delivery.creacion}</td>
+                    </tr> 
+                ))}
+            </tbody>
         </table>
     );
 }

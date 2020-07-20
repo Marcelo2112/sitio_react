@@ -1,10 +1,9 @@
 import React from 'react';
 import InputLine from '../componente/InputLine';
 import {login} from '../api'
-import { withRouter } from 'react-router';
 import { validatePassword, validateEmail } from '../utils/validations';
 
-class LoginForm extends React.Component{
+export default class LoginForm extends React.Component{
     state={
         loginData:{
             email:'',
@@ -26,8 +25,6 @@ class LoginForm extends React.Component{
 
         doLogin = (event) => {
             event.preventDefault();
-        
-        
             login(this.state.loginData)
               .then(response => {
                 return response.text();
@@ -85,7 +82,7 @@ class LoginForm extends React.Component{
     }
 
 } 
-export default withRouter (LoginForm);
+
 
 
 
